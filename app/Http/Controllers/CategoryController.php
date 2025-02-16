@@ -22,7 +22,6 @@ class CategoryController extends Controller
             [
                 "name"        => "required",
                 "photo"       => "required",
-                "gender"      => "required",
             ]
         );
 

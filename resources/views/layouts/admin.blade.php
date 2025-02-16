@@ -45,7 +45,6 @@ body {
 <nav class="navbar navbar-expand-lg navbar-custom" style="background-color: 	#67b3f1         ;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">PerfumeShop Admin</a>
-                <a class="navbar-brand" href="{{ url('/home') }}">PerfumeShop Admin1</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -61,7 +60,7 @@ body {
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href=" {{ url('/admin/item/list')}} "> Item </a>
+                                    <a class="nav-link" href=" {{ url('/admin/item/list')}} "> Product </a>
                                 </li>
 
                             @endif 

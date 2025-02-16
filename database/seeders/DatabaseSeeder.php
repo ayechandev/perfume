@@ -37,34 +37,32 @@ class DatabaseSeeder extends Seeder
         //For Category
 
         \App\Models\Category::factory()->create([
-            'name' => 'Dior Sauvage',
-            'photo' => 'Dior Sauvage.jpg',
-            'gender' => 'Men',
+            'name' => 'Dior',
+            'photo' => 'dior.jpg',
             'remark' => ''
         ]);
 
         \App\Models\Category::factory()->create([
-            'name' => 'Chanel Coco Mademoiselle de Eau de Perfum',
-            'photo' => 'Chanel Coco Mademoiselle de Eau de Perfum.jpg',
-            'gender' => 'Women',
+            'name' => 'Chanel',
+            'photo' => 'chanel.jpg',
             'remark' => ''
         ]);
 
         \App\Models\Category::factory()->create([
-            'name' => 'Chanel Coco Mademoiselle de Eau de Perfum',
-            'photo' => 'Chanel Coco Mademoiselle de Eau de Perfum.jpg',
-            'gender' => 'Women',
+            'name' => 'MYST',
+            'photo' => 'myst.jpg',
             'remark' => ''
         ]);
 
         ///For Item
 
         \App\Models\Item::factory()->create([
-            'name' => 'Dior Sauvage 60ml',
+            'category_id' => '4',
+            'name'  => 'Armani My Way ( 30ml ) ',
             'photo' => '1.jpg',
-            'price' => '50000',
-            'qty' => '10',
-            'gender' => 'Men',
+            'price' => '28000',
+            'qty'   => '10',
+            'gender' => 'Unisex',
             'status' => '',
             'remark' => ''
         ]);

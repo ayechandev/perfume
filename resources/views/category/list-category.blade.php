@@ -8,7 +8,7 @@
         <div class="col-md-4">
             <div class="card shadow-lg border-0" style="border-radius: 15px;">
                 <div class="card-header text-center text-white" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4); border-top-left-radius: 15px; border-top-right-radius: 15px;">
-                    <h5 class="fw-bold mb-0">Add New Perfume</h5>
+                    <h5 class="fw-bold mb-0">Add New Brand</h5>
                 </div>
                 <div class="card-body" style="background-color: #fffaf0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
                     <form action="{{ url('/admin/category/add') }}" method="POST" enctype="multipart/form-data">
@@ -17,7 +17,7 @@
                         <!-- Perfume Name -->
                         <div class="mb-4">
                             <label for="name" class="form-label fw-semibold text-muted">Perfume Name</label>
-                            <input type="text" name="name" class="form-control shadow-sm" placeholder="Ex: Dior Sauvage" style="border-radius: 10px;">
+                            <input type="text" name="name" class="form-control shadow-sm" placeholder="Ex: Dior" style="border-radius: 10px;">
                             @error('name')
                                 <div class="text-danger mt-1">{{ $message }}</div>
                             @enderror
@@ -32,18 +32,7 @@
                             @enderror
                         </div>
 
-                        {{-- <!-- Gender Dropdown -->
-                        <div class="mb-4">
-                            <label for="gender" class="form-label fw-semibold text-muted">Gender</label>
-                            <select name="gender" class="form-select shadow-sm" style="border-radius: 10px;">
-                                <option value="men">Men</option>
-                                <option value="women">Women</option>
-                                <option value="unisex">Unisex</option>
-                            </select>
-                            @error('gender')
-                                <div class="text-danger mt-1">{{ $message }}</div>
-                            @enderror
-                        </div> --}}
+                    
 
                         <!-- Remark -->
                         <div class="mb-4">
@@ -70,7 +59,7 @@
         <div class="col-md-8">
             <div class="card shadow-lg border-0" style="border-radius: 15px;">
                 <div class="card-header text-center text-white" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4); border-top-left-radius: 15px; border-top-right-radius: 15px;">
-                    <h5 class="fw-bold mb-0">Perfume List</h5>
+                    <h5 class="fw-bold mb-0">Brand List</h5>
                 </div>
                 <div class="card-body" style="background-color: #fffaf0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
                     <div class="table-responsive">
@@ -78,7 +67,7 @@
                             <thead class="table-light">
                                 <tr>
                                     <th>No</th>
-                                    <th>Perfume Name</th>
+                                    <th>Brand Name</th>
                                     <th>Photo</th>
                                     <th>Remark</th>
                                     <th class="text-center">Actions</th>

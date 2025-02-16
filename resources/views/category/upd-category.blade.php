@@ -7,7 +7,7 @@
         <div class="col-md-6">
             <div class="card shadow-lg border-0" style="border-radius: 15px;">
                 <div class="card-header text-center text-white" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4); border-top-left-radius: 15px; border-top-right-radius: 15px;">
-                    <h5 class="fw-bold mb-0">Update Category</h5>
+                    <h5 class="fw-bold mb-0">Update Brand</h5>
                 </div>
                 <div class="card-body" style="background-color: #fffaf0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
                     <form action="{{ url('/admin/category/upd/'.$category->id) }}" method="POST" enctype="multipart/form-data">
@@ -16,7 +16,7 @@
 
                         <!-- Category Name -->
                         <div class="mb-4">
-                            <label for="name" class="form-label fw-semibold text-muted">Category Name</label>
+                            <label for="name" class="form-label fw-semibold text-muted">Brand Name</label>
                             <input type="text" name="name" class="form-control shadow-sm" value="{{ $category->name }}" style="border-radius: 10px;">
                             @error('name')
                                 <div class="text-danger mt-1">{{ $message }}</div>
