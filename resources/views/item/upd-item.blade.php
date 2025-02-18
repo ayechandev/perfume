@@ -24,7 +24,7 @@
 
                         <!-- item Name -->
                         <div class="mb-4">
-                            <label for="name" class="form-label fw-semibold text-muted"> Item</label>
+                            <label for="name" class="form-label fw-semibold text-muted"> Product</label>
                             <input type="text" name="name" class="form-control shadow-sm" value="{{ $item->name }}" style="border-radius: 10px;">
                             @error('name')
                                 <div class="text-danger mt-1">{{ $message }}</div>

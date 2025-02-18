@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/admin/category/list', [App\Http\Controllers\CategoryController::class, 'listCategory'])->middleware('auth');
 
 //Category
 Route::get('/admin/category/list', [App\Http\Controllers\CategoryController::class, 'listCategory'])->Middleware('auth');
@@ -32,7 +34,49 @@ Route::get('/admin/item/del/{id}', [App\Http\Controllers\ItemController::class, 
 Route::get('/admin/item/upd/{id}', [App\Http\Controllers\ItemController::class, 'updItem'])->middleware('auth');
 Route::post('/admin/item/upd/{id}', [App\Http\Controllers\ItemController::class, 'updateItem'])->middleware('auth');
 
+//Category View
+Route::get('/category/{id}/item/view', [App\Http\Controllers\ItemController::class, 'categoryView']);
+//Category View
+
+//Detail View
+Route::get('/item/{id}/detail', [App\Http\Controllers\ItemController::class, 'detailView']);
+//Detail View
+
+//addToCartQty
+Route::get('/item/addToCartQty/{id}', [App\Http\Controllers\ItemController::class, 'getAddToCartQty']);
+//addToCartQty
+
+//shoppingCart
+Route::get('/item/shoppingCart', [App\Http\Controllers\ItemController::class, 'getCart']);
+//shoppingCart
+
+//Minus (-) shoppingCart
+Route::get('/item/subToCart/{id}', [App\Http\Controllers\ItemController::class, 'getSubToCart']);
+//Minus (-) shoppingCart
+
+//Plus (+) shoppingCart
+Route::get('/item/addToCart/{id}', [App\Http\Controllers\ItemController::class, 'getAddToCart']);
+//Plus (+) shoppingCart
+
+//Remove shoppingCart
+Route::get('/item/removeFromCart/{id}', [App\Http\Controllers\ItemController::class, 'getRemoveFromCart']);
+//Remove shoppingCart
+
+//Clear shoppingCart
+Route::get('/item/clearCart', [App\Http\Controllers\ItemController::class, 'getClearCart']);
+//Clear shoppingCart
+
+//Order
+Route::get('/order', [App\Http\Controllers\ItemController::class, 'getOrder'])->middleware('auth');
+//Order
+
+//Payment
+Route::get('/payment', [App\Http\Controllers\ItemController::class, 'getPayment']);
+Route::post('/payment', [App\Http\Controllers\ItemController::class, 'createPayment']);
+//Payment
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

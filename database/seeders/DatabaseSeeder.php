@@ -31,6 +31,12 @@ class DatabaseSeeder extends Seeder
             'password'  => Hash::make('admin12345'),
         ]);
 
+        \App\Models\User::factory()->create([
+            'name'      => 'User',
+            'email'     => 'user@gmail.com',
+            'password'  => Hash::make('user12345'),
+        ]);
+
 
 
 
@@ -57,7 +63,7 @@ class DatabaseSeeder extends Seeder
         ///For Item
 
         \App\Models\Item::factory()->create([
-            'category_id' => '4',
+            'category_id' => '3',
             'name'  => 'Armani My Way ( 30ml ) ',
             'photo' => '1.jpg',
             'price' => '28000',
